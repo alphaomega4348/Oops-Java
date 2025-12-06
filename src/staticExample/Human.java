@@ -7,6 +7,16 @@ public class Human {
     boolean married;
     static long population;
 
+    //not allowed as this keyword inside static is not allowed
+    static void message(){
+        System.out.println(this.age);
+    }
+
+    //allowed to reference object
+     void message2(){
+         System.out.println(this.age);
+    }
+
     public Human(int age, String name, int salary, boolean married) {
         this.age = age;
         this.name = name;
