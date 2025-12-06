@@ -8,14 +8,19 @@ public class Main {
 //        System.out.println("After creation");
 //
 //        System.out.println(audi.engine+" "+audi.numOfSeats+" "+audi.price);
-       final A shivam=new A("shivam");
-        shivam.name="kumar"; //allowed
+        final A shivam = new A("shivam");
+        shivam.name = "kumar"; //allowed
         //When a non-primitve is final you can't reassign it.
         //shivam=new A("hero"); //not allowed
 
+
+        A obj;
+        //when a large number of objects are created then only garbage collector is called...
+        for (int i = 0; i < 10000000; i++) {
+            obj = new A("hello");
+        }
+
     }
-
-
 }
 
 
@@ -36,7 +41,12 @@ class A{
     String name;
 
     public A(String name){
+        //System.out.println("Object is created");
         this.name=name;
     }
 
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Object is destroyed");
+    }
 }
