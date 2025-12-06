@@ -9,7 +9,7 @@ public class Human {
 
     //not allowed as this keyword inside static is not allowed
     static void message(){
-        System.out.println(this.age);
+        // System.out.println(this.age); accessing non-static from static is not allowed...
     }
 
     //allowed to reference object
