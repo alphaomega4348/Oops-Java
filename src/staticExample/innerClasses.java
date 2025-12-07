@@ -18,8 +18,8 @@ non-static{
  */
 public class innerClasses {
 
-    //throws error inside main because trying to access a inner class from static method which is not allowed
-    // it would be fine if Test was not an inner class but an independent class itself.
+    ///throws error inside main because trying to access a inner class from static method which is not allowed
+    /// it would be fine if Test was not an inner class but an independent class itself.
 
 //    class Test{
 //
@@ -27,9 +27,7 @@ public class innerClasses {
 //    public static void main(String[] args) {
 //        Test a=new Test("Shivam");
 //    }
-// TODO:
-//  Test is mentioned static inside a non-static class therefore it's object is
-//  not dependent on "innerClasses" but main and test can have instance of each other.
+/// TODO: Test is mentioned static inside a non-static class therefore it's object is not dependent on "innerClasses" but main and test can have instance of each other.
         static class Test{
             String name;
 
