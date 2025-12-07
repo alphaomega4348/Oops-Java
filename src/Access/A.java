@@ -1,7 +1,7 @@
 package Access;
 
 public class A {
-    protected int num;
+     int num;
     String name;
     int [] arr;
 
